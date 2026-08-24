@@ -36,7 +36,19 @@ namespace Assignment9
 
             #endregion
 
+            #region Question3
 
+            //a) What is a static field, and how is it different from an instance field ?
+            //==> A static field belongs to the class itself, not to a specific object. There is only one copy of a static field shared by all objects of that class.
+            //==> An instance field belongs to a specific object, so each object has its own copy.
+            //b) What is a static method? Can a static method directly access instance members?
+            //A static method belongs to the class rather than to a specific object. No, a static method cannot directly access instance members, because instance members belong to a particular objec
+            //c) What is a static constructor, and when is it executed ?
+            //A static constructor is used to initialize static fields or perform one-time setup for a class.It: Has the same name as the class, Has no access modifier, Takes no parameters, Executes automatically once, before the class is first used.
+            //d) What is a static class? Can you create an object from a static class?
+            //A static class is a class that can contain only static members. It is used when the class does not need to represent individual objects.No, you cannot create an object from a static class.
+
+            #endregion
 
             #endregion
 
