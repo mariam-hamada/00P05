@@ -96,7 +96,7 @@ namespace Assignment9
 
         public string GetTrackingStatus()
         {
-            return $"Shipment {TrackingCode} has been delivered.";
+            return "Delivered";
         }
 
         public decimal CalculateInsurance()

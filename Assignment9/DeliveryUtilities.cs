@@ -14,7 +14,7 @@ namespace Assignment9
         public static void PrintSystemTitle()
         {
             PrintSeparator();
-            Console.WriteLine("Delivery Center");
+            Console.WriteLine("Smart Delivery Management System");
             PrintSeparator();
         }
     }

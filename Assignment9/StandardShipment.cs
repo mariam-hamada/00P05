@@ -52,9 +52,9 @@ namespace Assignment9
             Console.WriteLine($"Estimated Cost: {EstimatedCost} EGP");
         }
 
-        public override string GetTrackingStatus()
+        public string GetTrackingStatus()
         {
-            return $"Shipment {TrackingCode} is Ready.";
+            return "In Transit";
         }
 
         public decimal CalculateInsurance()

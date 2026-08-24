@@ -10,11 +10,9 @@ namespace Assignment9
     {
         public static string GetSummary(this Shipment shipment)
         {
-            ITrackable trackable = (ITrackable)shipment;
+            string trackingStatus = ((ITrackable)shipment).GetTrackingStatus();
 
-            string shipmentType = shipment.GetType().Name.Replace("Shipment", "");
-
-            return $"{shipment.TrackingCode} | {shipmentType} | {shipment.Weight} KG | {trackable.GetTrackingStatus()}";
+            return $"{shipment.TrackingCode} | {shipment.GetType().Name.Replace("Shipment", "")} | {shipment.Weight} KG | {trackingStatus}";
         }
 
         public static bool IsDelivered(this Shipment shipment)

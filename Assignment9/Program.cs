@@ -219,8 +219,173 @@ namespace Assignment9
 
             #endregion
 
+            #region 11 Main() Checklist
+
+                DeliveryUtilities.PrintSystemTitle();
+
+                DeliveryUtilities.PrintSeparator();
+
+                Console.WriteLine("Creating Shipments...");
+
+                DeliveryUtilities.PrintSeparator();
+
+                StandardShipment shipment1 = new StandardShipment(
+                    "SH001",
+                    "Laptop",
+                    3,
+                    100,
+                    new DeliveryAddress("Cairo", "Tahrir", 10)
+                );
+
+                ExpressShipment shipment2 = new ExpressShipment(
+                    "SH002",
+                    "Phone",
+                    2,
+                    150,
+                    new DeliveryAddress("Giza", "Nile Street", 20), 
+                    50
+                );
+
+                InternationalShipment shipment3 = new InternationalShipment(
+                    "SH003",
+                    "Computer",
+                    8,
+                    300,
+                    new DeliveryAddress("Cairo", "Nasr City", 30),
+                    "germany",
+                    60
+                );
+
+                Console.WriteLine("Standard Shipment Created");
+                Console.WriteLine("Express Shipment Created");
+                Console.WriteLine("International Shipment Created");
+
+                Console.WriteLine("Total Shipments Created : "
+                    + Shipment.GetTotalShipmentsCreated());
+
+                DeliveryUtilities.PrintSeparator();
+                Console.WriteLine("Object Copying");
+                DeliveryUtilities.PrintSeparator();
+
+                Shipment assignedShipment = shipment1;
+
+                Console.WriteLine("Original Shipment : "
+                    + shipment1.TrackingCode);
+
+                Console.WriteLine("Assigned Shipment : "
+                    + assignedShipment.TrackingCode);
+
+                Console.WriteLine("Same Object : "
+                    + (shipment1 == assignedShipment));
+
+                Console.WriteLine("------------------------------------------");
+                Console.WriteLine("Shallow Copy");
+                Console.WriteLine("------------------------------------------");
+
+                shipment1.Destination.City = "Cairo";
+
+                Shipment shallowShipment = shipment1.ShallowCopy();
+
+                Console.WriteLine("Original Shipment Address : "
+                    + shipment1.Destination.City);
+
+                Console.WriteLine("Copied Shipment Address : "
+                    + shallowShipment.Destination.City);
+
+                Console.WriteLine("Changing copied shipment address...");
+
+                shallowShipment.Destination.City = "Giza";
+
+                Console.WriteLine("Original Shipment Address : "
+                    + shipment1.Destination.City);
+
+                Console.WriteLine("Copied Shipment Address : "
+                    + shallowShipment.Destination.City);
+
+                Console.WriteLine("Same DeliveryAddress Object : "
+                    + (shipment1.Destination == shallowShipment.Destination));
+
+
+                Console.WriteLine("------------------------------------------");
+                Console.WriteLine("Deep Copy");
+                Console.WriteLine("------------------------------------------");
+
+                shipment1.Destination.City = "Cairo";
+
+                Shipment deepShipment = shipment1.DeepCopy();
+
+                Console.WriteLine("Original Shipment Address : "
+                    + shipment1.Destination.City);
+
+                Console.WriteLine("Copied Shipment Address : "
+                    + deepShipment.Destination.City);
+
+                Console.WriteLine("Changing copied shipment address...");
+
+                deepShipment.Destination.City = "Giza";
+
+                Console.WriteLine("Original Shipment Address : "
+                    + shipment1.Destination.City);
+
+                Console.WriteLine("Copied Shipment Address : "
+                    + deepShipment.Destination.City);
+
+                Console.WriteLine("Same DeliveryAddress Object : "
+                    + (shipment1.Destination == deepShipment.Destination));
+
+
+                DeliveryUtilities.PrintSeparator();
+                Console.WriteLine("Extension Methods");
+                DeliveryUtilities.PrintSeparator();
+
+                Console.WriteLine(shipment1.GetSummary());
+                Console.WriteLine(shipment2.GetSummary());
+                Console.WriteLine(shipment3.GetSummary());
+
+                Console.WriteLine();
+
+                Console.WriteLine("SH001 Is Delivered : "
+                    + shipment1.IsDelivered());
+
+                Console.WriteLine("SH003 Is Delivered : "
+                    + shipment3.IsDelivered());
+
+
+                DeliveryUtilities.PrintSeparator();
+                Console.WriteLine("Tracking Status");
+                DeliveryUtilities.PrintSeparator();
+
+                shipment2.UpdateTrackingStatus("Out For Delivery");
+
+
+                DeliveryUtilities.PrintSeparator();
+                Console.WriteLine("Static Utilities");
+                DeliveryUtilities.PrintSeparator();
+
+                Console.WriteLine("------------------------------------------");
+                Console.WriteLine("Delivery Center");
+                Console.WriteLine("------------------------------------------");
+
+                Console.WriteLine("Total Shipments Created : "
+                    + Shipment.GetTotalShipmentsCreated());
+
+
+                DeliveryUtilities.PrintSeparator();
+                Console.WriteLine("Partial Method");
+                DeliveryUtilities.PrintSeparator();
+
+                shipment3.UpdateTrackingStatus("Delivered");
+
+
+                DeliveryUtilities.PrintSeparator();
+                Console.WriteLine("Assignment Completed");
+                DeliveryUtilities.PrintSeparator();
+            }
+
+            #endregion
+
             #endregion
 
         }
     }
-}
+
