@@ -176,6 +176,8 @@ namespace Assignment9
             return TotalShipmentsCreated;
         }
 
+        partial void OnTrackingStatusChanged(string newStatus);
+
         #endregion
 
     }
