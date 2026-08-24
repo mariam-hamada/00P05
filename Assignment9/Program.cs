@@ -174,6 +174,17 @@ namespace Assignment9
 
             #endregion
 
+            #region 6 Static Method
+
+            //Shipment shipment1 = new Shipment("SH001");
+
+            //Shipment shipment2 = new Shipment("SH002");
+
+            //Console.WriteLine("Total Shipments Created : "+ Shipment.GetTotalShipmentsCreated());
+
+
+            #endregion
+
             #endregion
 
         }

@@ -167,6 +167,11 @@ namespace Assignment9
                 );
         }
 
+        public static int GetTotalShipmentsCreated()
+        {
+            return TotalShipmentsCreated;
+        }
+
         #endregion
         }
 }
