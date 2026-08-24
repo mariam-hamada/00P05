@@ -98,6 +98,12 @@ namespace Assignment9
             TotalShipmentsCreated++;
         }
 
+         static Shipment()
+        {
+            TotalShipmentsCreated = 0;
+            Console.WriteLine("Shipment System Initialized");
+        }
+
         #endregion
 
 

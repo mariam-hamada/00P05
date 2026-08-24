@@ -159,7 +159,18 @@ namespace Assignment9
             //Shipment shipment3 = new Shipment("SH003");
 
             //Console.WriteLine("Total Shipments Created: "
-            +Shipment.TotalShipmentsCreated);
+            //+Shipment.TotalShipmentsCreated);
+
+            #endregion
+
+            #region 5 Static Constructor
+
+            //Shipment shipment1 = new Shipment("SH001");
+
+            //Shipment shipment2 = new Shipment("SH002");
+
+            //Console.WriteLine("Total Shipments Created: "
+            //    + Shipment.TotalShipmentsCreated);
 
             #endregion
 
