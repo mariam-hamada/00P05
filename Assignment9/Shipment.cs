@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Assignment9
 {
-    internal class Shipment
+    internal partial class Shipment
     {
         #region Attributes
 
@@ -13,10 +13,20 @@ namespace Assignment9
         private decimal _weight;
         private decimal _deliveryFee;
         private DeliveryAddress _destination;
-        public static int TotalShipmentsCreated = 0;
 
         #endregion
 
+        #region Static Members
+
+        public static int TotalShipmentsCreated = 0;
+
+        static Shipment()
+        {
+            TotalShipmentsCreated = 0;
+            Console.WriteLine("Shipment System Initialized");
+        }
+
+        #endregion
 
         #region Properties
 
@@ -70,7 +80,6 @@ namespace Assignment9
 
         #endregion
 
-
         #region Constructors
 
         public Shipment(string trackingCode)
@@ -80,6 +89,7 @@ namespace Assignment9
             Weight = 1;
             DeliveryFee = 50;
             Destination = new DeliveryAddress("Cairo", "Tahrir", 10);
+
             TotalShipmentsCreated++;
         }
 
@@ -95,20 +105,13 @@ namespace Assignment9
             Weight = weight;
             DeliveryFee = deliveryFee;
             Destination = destination;
-            TotalShipmentsCreated++;
-        }
 
-         static Shipment()
-        {
-            TotalShipmentsCreated = 0;
-            Console.WriteLine("Shipment System Initialized");
+            TotalShipmentsCreated++;
         }
 
         #endregion
 
-
         #region Methods
-
         public void UpdateDeliveryFee(decimal newFee)
         {
             if (newFee > 0)
@@ -128,9 +131,9 @@ namespace Assignment9
             if (totalWeight > 0)
                 Weight = totalWeight;
         }
+
         public virtual void PrintShipment()
         {
-
             Console.WriteLine($"Tracking Code : {TrackingCode}");
             Console.WriteLine($"Description   : {Description}");
             Console.WriteLine($"Weight        : {Weight} KG");
@@ -141,11 +144,11 @@ namespace Assignment9
         public Shipment CopyShipment()
         {
             return new Shipment(
-                this.TrackingCode,
-                this.Description,
-                this.Weight,
-                this.DeliveryFee,
-                this.Destination);
+                TrackingCode,
+                Description,
+                Weight,
+                DeliveryFee,
+                Destination);
         }
 
         public Shipment ShallowCopy()
@@ -155,16 +158,17 @@ namespace Assignment9
 
         public Shipment DeepCopy()
         {
+            DeliveryAddress newDestination = new DeliveryAddress(
+                Destination.City,
+                Destination.Street,
+                Destination.BuildingNumber);
+
             return new Shipment(
-                this.TrackingCode,
-                this.Description,
-                this.Weight,
-                this.DeliveryFee,
-                new DeliveryAddress(
-                    this.Destination.City,
-                    this.Destination.Street,
-                    this.Destination.BuildingNumber)
-                );
+                TrackingCode,
+                Description,
+                Weight,
+                DeliveryFee,
+                newDestination);
         }
 
         public static int GetTotalShipmentsCreated()
@@ -173,5 +177,6 @@ namespace Assignment9
         }
 
         #endregion
-        }
+
+    }
 }

@@ -207,6 +207,18 @@ namespace Assignment9
 
             #endregion
 
+            #region 9 Partial Shipment Class
+
+            //Shipment shipment1 = new Shipment("SH001");
+
+            //Console.WriteLine(shipment1.GetTrackingStatus());
+
+            //shipment1.UpdateTrackingStatus("Delivered");
+
+            //Console.WriteLine(shipment1.GetTrackingStatus());
+
+            #endregion
+
             #endregion
 
         }

@@ -52,7 +52,7 @@ namespace Assignment9
             Console.WriteLine($"Estimated Cost: {EstimatedCost} EGP");
         }
 
-        public string GetTrackingStatus()
+        public override string GetTrackingStatus()
         {
             return $"Shipment {TrackingCode} is Ready.";
         }
