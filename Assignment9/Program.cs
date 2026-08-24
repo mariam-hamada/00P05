@@ -1,4 +1,5 @@
-﻿using static System.Runtime.InteropServices.JavaScript.JSType;
+﻿using System.Reflection.Metadata;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Assignment9
 {
@@ -47,6 +48,19 @@ namespace Assignment9
             //A static constructor is used to initialize static fields or perform one-time setup for a class.It: Has the same name as the class, Has no access modifier, Takes no parameters, Executes automatically once, before the class is first used.
             //d) What is a static class? Can you create an object from a static class?
             //A static class is a class that can contain only static members. It is used when the class does not need to represent individual objects.No, you cannot create an object from a static class.
+
+            #endregion
+
+            #region Question4
+
+            //a) What is an Extension Method?
+            //An Extension Method is a method that allows you to add new functionality to an existing class or type without modifying the original class or creating a derived class.
+            //b) What keyword must be used in the first parameter of an extension method?
+            //The this keyword must be used before the first parameter.
+            //c) Where must an extension method be declared?
+            //An extension method must be declared inside a static class.
+            //d) Can an extension method access private members of the class it extends?
+            //No. An extension method cannot directly access the private members of the class it extends.
 
             #endregion
 
