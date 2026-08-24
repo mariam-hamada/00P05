@@ -185,6 +185,11 @@ namespace Assignment9
 
             #endregion
 
+            #region 7 Static Class
+
+            DeliveryUtilities.PrintSystemTitle();
+            #endregion
+
             #endregion
 
         }
