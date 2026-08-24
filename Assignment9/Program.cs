@@ -64,6 +64,19 @@ namespace Assignment9
 
             #endregion
 
+            #region Question5
+
+            //a) What is a Partial Class?
+            //A Partial Class allows you to split the definition of one class into multiple files. The compiler combines all parts into a single class when the program is compiled.
+            //b) Why would a developer split one class into multiple files?
+            //Keep large classes organized, Make the code easier to read and maintain, Allow multiple developers to work on different parts of the same class, Separate different functionalities of the class.
+            //c) What is a Partial Method?
+            //A Partial Method is a method that can be declared in one part of a partial class and implemented in another part.
+            //d) What happens if a declared partial method has no implementation?
+            //If a partial method has no implementation, the compiler can remove the method declaration and any calls to it from the compiled code.
+
+            #endregion
+
             #endregion
 
         }
