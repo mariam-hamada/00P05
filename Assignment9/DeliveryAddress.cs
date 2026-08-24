@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Assignment9;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -6,7 +7,7 @@ namespace Assignment9
 {
     #region DeliveryAddress
 
-    internal struct DeliveryAddress
+    internal class DeliveryAddress
     {
         #region Attributes
 

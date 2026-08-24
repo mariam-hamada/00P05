@@ -73,7 +73,7 @@ namespace Assignment9
 
 
         #region Methods
-        public override void PrintShipment()
+        public  void PrintShipment()
         {
             Console.WriteLine("International Shipment");
             Console.WriteLine();

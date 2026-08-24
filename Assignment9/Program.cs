@@ -79,7 +79,22 @@ namespace Assignment9
 
             #endregion
 
-            #region MyRegion
+            #region Part 02 — Practical
+
+            #region 1 Object Copying
+
+            //Shipment shipment1 = new Shipment("SH001", "Mobile Phone", 2, 50, new DeliveryAddress("cairo", "Tahrir", 6));
+            //Shipment shipment2 = shipment1;
+            //Console.WriteLine("By Assignment");
+            //Console.WriteLine($"shipment1 == shipment2 --> {shipment1==shipment2}");
+            ////copies the refrence so, will be true 
+
+            //Shipment shipment3 = shipment1.CopyShipment();
+
+            //Console.WriteLine("By Copy shipment method ");
+            //Console.WriteLine($"shipment1 == shipment3 --> {shipment1 == shipment3}");
+            //// creates a new object so, will be false 
+            #endregion
 
             #endregion
 

@@ -40,7 +40,7 @@ namespace Assignment9
 
         #region Methods
 
-        public override void PrintShipment()
+        public void PrintShipment()
         {
             Console.WriteLine("Standard Shipment");
             Console.WriteLine();

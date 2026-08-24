@@ -62,7 +62,7 @@ namespace Assignment9
         #region Methods
 
 
-        public override void PrintShipment()
+        public  void PrintShipment()
         {
             Console.WriteLine("Express Shipment");
             Console.WriteLine();

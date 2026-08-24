@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Assignment9
 {
-    internal abstract class Shipment
+    internal class Shipment
     {
         #region Attributes
 
@@ -65,7 +65,7 @@ namespace Assignment9
             set { _destination = value; }
         }
 
-        public abstract decimal EstimatedCost { get; }
+        public virtual decimal EstimatedCost { get; }
 
         #endregion
 
@@ -119,8 +119,27 @@ namespace Assignment9
             if (totalWeight > 0)
                 Weight = totalWeight;
         }
-        public abstract void PrintShipment();
+        public virtual void PrintShipment()
+        {
+
+            Console.WriteLine($"Tracking Code : {TrackingCode}");
+            Console.WriteLine($"Description   : {Description}");
+            Console.WriteLine($"Weight        : {Weight} KG");
+            Console.WriteLine($"Delivery Fee  : {DeliveryFee} EGP");
+            Console.WriteLine($"Estimated Cost: {EstimatedCost} EGP");
+        }
+
+        public Shipment CopyShipment()
+        {
+            return new Shipment(
+                this.TrackingCode,
+                this.Description,
+                this.Weight,
+                this.DeliveryFee,
+                this.Destination);
+        }
+
 
         #endregion
-    }
+        }
 }
