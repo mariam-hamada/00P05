@@ -114,6 +114,55 @@ namespace Assignment9
 
             #endregion
 
+            #region 3 Deep Copy
+            //Shipment shipment1 = new Shipment("SH001", "Mobile Phone", 2, 50, new DeliveryAddress("cairo", "Tahrir", 6));
+            //Shipment deepShipment = shipment1.DeepCopy();
+            //Console.WriteLine($"Are Shipment objects the same: {shipment1 == deepShipment}");
+
+            //Console.WriteLine($"Are DeliveryAddress objects the same {shipment1.Destination == deepShipment.Destination}");
+
+            //Console.WriteLine("\nBefore change:");
+
+            //Console.WriteLine("Original: " + shipment1.Destination.City);
+
+            //Console.WriteLine("Copied: "+ deepShipment.Destination.City);
+
+            //deepShipment.Destination.City = "Giza";
+
+            //Console.WriteLine("\nAfter changing copied address:");
+
+            //Console.WriteLine("Original: " + shipment1.Destination.City);
+
+            //Console.WriteLine("Copied: " + deepShipment.Destination.City);
+
+
+            #endregion
+
+            #region 4 Static Field
+
+            //Shipment shipment1 = new Shipment(
+            //    "SH001",
+            //    "Laptop",
+            //    5,
+            //    100,
+            //    new DeliveryAddress("Cairo", "Tahrir", 10)
+            //);
+
+            //Shipment shipment2 = new Shipment(
+            //    "SH002",
+            //    "Phone",
+            //    2,
+            //    80,
+            //    new DeliveryAddress("Giza", "Nile Street", 20)
+            //);
+
+            //Shipment shipment3 = new Shipment("SH003");
+
+            //Console.WriteLine("Total Shipments Created: "
+            +Shipment.TotalShipmentsCreated);
+
+            #endregion
+
             #endregion
 
         }

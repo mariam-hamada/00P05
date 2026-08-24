@@ -13,6 +13,7 @@ namespace Assignment9
         private decimal _weight;
         private decimal _deliveryFee;
         private DeliveryAddress _destination;
+        public static int TotalShipmentsCreated = 0;
 
         #endregion
 
@@ -79,6 +80,7 @@ namespace Assignment9
             Weight = 1;
             DeliveryFee = 50;
             Destination = new DeliveryAddress("Cairo", "Tahrir", 10);
+            TotalShipmentsCreated++;
         }
 
         public Shipment(
@@ -93,6 +95,7 @@ namespace Assignment9
             Weight = weight;
             DeliveryFee = deliveryFee;
             Destination = destination;
+            TotalShipmentsCreated++;
         }
 
         #endregion
@@ -144,6 +147,19 @@ namespace Assignment9
             return (Shipment)this.MemberwiseClone();
         }
 
+        public Shipment DeepCopy()
+        {
+            return new Shipment(
+                this.TrackingCode,
+                this.Description,
+                this.Weight,
+                this.DeliveryFee,
+                new DeliveryAddress(
+                    this.Destination.City,
+                    this.Destination.Street,
+                    this.Destination.BuildingNumber)
+                );
+        }
 
         #endregion
         }
