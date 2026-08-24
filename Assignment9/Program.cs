@@ -187,7 +187,24 @@ namespace Assignment9
 
             #region 7 Static Class
 
-            DeliveryUtilities.PrintSystemTitle();
+            //DeliveryUtilities.PrintSystemTitle();
+            #endregion
+
+            #region 8 Extension Methods
+
+            // Shipment shipment1 = new StandardShipment(
+            //     "SH001",
+            //     "Laptop",
+            //     5,
+            //     100,
+            //     new DeliveryAddress("Cairo", "Tahrir", 10)
+            // );
+
+            //Console.WriteLine(shipment1.GetSummary());
+
+            //Console.WriteLine(shipment1.IsDelivered());
+
+
             #endregion
 
             #endregion
