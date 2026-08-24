@@ -96,6 +96,24 @@ namespace Assignment9
             //// creates a new object so, will be false 
             #endregion
 
+            #region 2 Shallow Copy
+
+            //Shipment shipment1 = new Shipment("SH001", "Mobile Phone", 2, 50, new DeliveryAddress("cairo", "Tahrir", 6));
+            //Shipment shallowShipment = shipment1.ShallowCopy();
+            //Console.WriteLine($"Is the Shallow shipment object is the same as Shipment1: {shallowShipment == shipment1}");
+            //Console.WriteLine($"Is the two shipments points to the same address: {shallowShipment.Destination == shipment1.Destination}");
+            //Console.WriteLine("Before change:");
+            //Console.WriteLine("Original: " + shipment1.Destination.City);
+            //Console.WriteLine("Copied: " + shallowShipment.Destination.City);
+
+            //shallowShipment.Destination.City = "Giza";
+
+            //Console.WriteLine("After change:");
+            //Console.WriteLine("Original: " + shipment1.Destination.City);
+            //Console.WriteLine("Copied: " + shallowShipment.Destination.City);
+
+            #endregion
+
             #endregion
 
         }

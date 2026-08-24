@@ -139,6 +139,11 @@ namespace Assignment9
                 this.Destination);
         }
 
+        public Shipment ShallowCopy()
+        {
+            return (Shipment)this.MemberwiseClone();
+        }
+
 
         #endregion
         }
