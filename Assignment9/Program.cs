@@ -21,6 +21,23 @@ namespace Assignment9
 
             #endregion
 
+            #region Question2
+
+            //a) What is a Shallow Copy?
+            //A Shallow Copy creates a new object, but it copies the values of the original object's fields. For reference-type fields, it copies the reference, not the referenced object.
+            //b) What is a Deep Copy?
+            //A Deep Copy creates a new object and also creates new copies of the objects referenced by its reference-type members. The copied object is completely independent of the original.
+            //c) What happens to reference-type members when a Shallow Copy is created?
+            //The reference itself is copied, so both the original and copied objects point to the same referenced object.Therefore, changing that referenced object through one copy can affect the other copy.
+            //d) What happens to reference-type members when a Deep Copy is created?
+            //A new copy of each referenced object is created. The original and copied objects have their own separate reference-type members, so changes to one do not affect the other.
+            //e) Give one situation where Deep Copy would be safer than Shallow Copy.
+            //
+
+            #endregion
+
+
+
             #endregion
 
         }
